@@ -1,0 +1,167 @@
+Input : urgent_email.txt 
+
+OUTPUT : 
+
+🔧 Initialized SharedMemory system (Redis-backed)
+
+🔧 Initialized SharedMemory system (Redis-backed)
+
+🔧 Initialized SharedMemory system (Redis-backed)
+
+🔧 Initialized SharedMemory system (Redis-backed)
+
+Processing file: samples/urgent_email.txt
+Classifying input...
+
+📌 Logging processing step:
+  Agent: LLMClassifierAgent
+  Action: classify_llm
+  Added log entry #1
+
+📝 Memory Operation: Log Processing
+🔑 Conversation ID: 8cf87b15-4a30-4420-860e-e5fefbee88ff
+
+🔍 Retrieved context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  No context found
+
+📜 Retrieved processing history for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 1 log entries
+
+📜 Processing Logs:
+  - 2025-06-01T17:57:44.843015 | LLMClassifierAgent | classify_llm
+    Details: {
+  "format": "email",
+  "intent": "complaint",
+  "route_to": "email_agent"
+}
+
+📝 Updating context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Updates to apply: {
+  "format": "email",
+  "intent": "complaint",
+  "classification_timestamp": true
+}
+
+🔍 Retrieved context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  No context found
+
+  Changes made:
+  - format: NOT_SET -> email
+  - intent: NOT_SET -> complaint
+  - classification_timestamp: NOT_SET -> True
+
+📝 Memory Operation: Update Context
+🔑 Conversation ID: 8cf87b15-4a30-4420-860e-e5fefbee88ff
+
+🔍 Retrieved context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 3 context items
+
+📋 Current Context:
+  - format: email
+  - intent: complaint
+  - classification_timestamp: True
+
+📜 Retrieved processing history for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 1 log entries
+
+📜 Processing Logs:
+  - 2025-06-01T17:57:44.843015 | LLMClassifierAgent | classify_llm
+    Details: {
+  "format": "email",
+  "intent": "complaint",
+  "route_to": "email_agent"
+}
+Detected format: email
+Detected intent: complaint
+
+Processing with Email Agent...
+
+📌 Logging processing step:
+  Agent: EmailAgent
+  Action: process_email
+  Added log entry #2
+
+📝 Memory Operation: Log Processing
+🔑 Conversation ID: 8cf87b15-4a30-4420-860e-e5fefbee88ff
+
+🔍 Retrieved context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 3 context items
+
+📋 Current Context:
+  - format: email
+  - intent: complaint
+  - classification_timestamp: True
+
+📜 Retrieved processing history for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 2 log entries
+
+📜 Processing Logs:
+  - 2025-06-01T17:57:44.843015 | LLMClassifierAgent | classify_llm
+    Details: {
+  "format": "email",
+  "intent": "complaint",
+  "route_to": "email_agent"
+}
+  - 2025-06-01T17:57:45.656382 | EmailAgent | process_email
+    Details: {
+  "sender": "john.smith@client.com",
+  "urgency": "high",
+  "subject": "URGENT: System Downtime Issue"
+}
+
+📝 Updating context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Updates to apply: {
+  "email_sender": "john.smith@client.com",
+  "email_urgency": "high",
+  "email_subject": "URGENT: System Downtime Issue"
+}
+
+🔍 Retrieved context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 3 context items
+
+  Changes made:
+  - email_sender: NOT_SET -> john.smith@client.com
+  - email_urgency: NOT_SET -> high
+  - email_subject: NOT_SET -> URGENT: System Downtime Issue
+
+📝 Memory Operation: Update Context
+🔑 Conversation ID: 8cf87b15-4a30-4420-860e-e5fefbee88ff
+
+🔍 Retrieved context for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 6 context items
+
+📋 Current Context:
+  - format: email
+  - intent: complaint
+  - classification_timestamp: True
+  - email_sender: john.smith@client.com
+  - email_urgency: high
+  - email_subject: URGENT: System Downtime Issue
+
+📜 Retrieved processing history for conversation 8cf87b15-4a30-4420-860e-e5fefbee88ff
+  Found 2 log entries
+
+📜 Processing Logs:
+  - 2025-06-01T17:57:44.843015 | LLMClassifierAgent | classify_llm
+    Details: {
+  "format": "email",
+  "intent": "complaint",
+  "route_to": "email_agent"
+}
+  - 2025-06-01T17:57:45.656382 | EmailAgent | process_email
+    Details: {
+  "sender": "john.smith@client.com",
+  "urgency": "high",
+  "subject": "URGENT: System Downtime Issue"
+}
+
+Email Analysis:
+From: John Smith <john.smith@client.com>
+Subject: URGENT: System Downtime Issue
+Urgency: high
+
+Content Preview:
+URGENT: Our production system is currently experiencing critical downtime.
+
+We need immediate assistance to resolve this issue as it is affecting our business operations. Our monitoring system shows...
+PS C:\Users\ansul\OneDrive\Desktop\agentic ai system> 
