@@ -1,0 +1,32 @@
+{
+    "invoice_number": "INV-2024-001",
+    "date": "2024-01-06",
+    "due_date": "2024-02-05",
+    "customer": {
+        "name": "Acme Corporation",
+        "email": "billing@acme.com",
+        "address": "123 Business Ave, Suite 100, Enterprise City, 12345"
+    },
+    "items": [
+        {
+            "description": "Professional Services",
+            "quantity": 40,
+            "unit": "hours",
+            "rate": 150.00,
+            "amount": 6000.00
+        },
+        {
+            "description": "Software License",
+            "quantity": 1,
+            "unit": "license",
+            "rate": 2500.00,
+            "amount": 2500.00
+        }
+    ],
+    "subtotal": 8500.00,
+    "tax_rate": 0.08,
+    "tax_amount": 680.00,
+    "total": 9180.00,
+    "payment_terms": "Net 30",
+    "notes": "Please include invoice number with payment"
+} 
